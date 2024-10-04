@@ -5,13 +5,201 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link rel="stylesheet" href="./style.css">
-    <script></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <div>
-        <h1 class="heading">Landing Page | Sonal Kumarii</h1>
-        <p>this is the landing page.</p>
+    <header>
+        <nav class="navbar">
+            <img class="logo" src="./assets/icons/logo.svg" alt="">
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#support">Support</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="#login" class="login-button">Login</a>
+                <a href="#register" class="register-button">Register</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>The largest community of photo enthusiasts</h1>
+            <a href="#join" class="cta-button">Join Today</a>
+        </div>
+    </section>
+
+    <section id="features" class="features-section">
+        <div class="features-content">
+            <h2>Snap photos and share like never before</h2>
+            <div class="features-container">
+                <div class="feature">
+                    <h3>Sed ut perspiciatis</h3>
+                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.</p>
+                    <a href="#" class="cta-button">Learn more</a>
+                </div>
+                <div class="feature">
+                    <h3>Lorem ipsum dolor</h3>
+                    <p>Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+                    <a href="#" class="cta-button">Learn more</a>
+                </div>
+                <div class="feature">
+                    <h3>Nemo enim ipsam</h3>
+                    <p>Consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam.</p>
+                    <a href="#" class="cta-button">Learn more</a>
+                </div>
+                <div class="feature">
+                    <h3>Tempor incididunt</h3>
+                    <p>Eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.</p>
+                    <a href="#" class="cta-button">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" >
+        <div class="styled-sectionn styled-headingg" >
+            <h2>Have you ever posted any photo on social media?</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+            
+        </div>
+        <div class="styled-section new-section ">
+        <div class="styled-heading">
+            <div class="features-list">
+                <div class="feature-item">
+                    <h3>Sed ut perspiciatis</h3>
+                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Lorem ipsum dolor</h3>
+                    <p>Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Nemo enim ipsam</h3>
+                    <p>Consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+                </div>
+            </div>
+        </div>
+        <div class="new-section-image">
+            <img src="./assets/images/sky.jpeg" class="imgg" alt="Skyscrapers">
+        </div>
     </div>
-    <script src="script.js"></script>
+    </section>
+
+    <section class="styled-section">
+        <div class="styled-heading">
+            <h2>Make your photos more stylish</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+        </div>
+        <div class="styled-cards">
+            <div class="styled-card">
+                <img src="./assets/images/laptop.jpeg" alt="Person using laptop">
+                <div class="styled-card-content">
+                    <h3>Sed ut perspiciatis</h3>
+                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.</p>
+                </div>
+            </div>
+            <div class="styled-card">
+                <img src="./assets/images/businessman.jpeg" alt="Technology and diagram">
+                <div class="styled-card-content">
+                    <h3>Lorem ipsum dolor</h3>
+                    <p>Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                </div>
+            </div>
+            <div class="styled-card">
+                <img src="./assets/images/hands.jpeg" alt="Business handshake with cityscape">
+                <div class="styledcard-content">
+                    <h3>Nemo enim ipsam</h3>
+                    <p>Consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="trial-section">
+        <div class="trial-heading">
+            <h2>Ready to take a free trial?</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+        </div>
+        <div class="trial-form-wrapper">
+            <form class="trial-form">
+                <h3>Sign up for a free account</h3>
+                <div class="form-row">
+                    <input type="text" placeholder="First name" required>
+                    <input type="text" placeholder="Last name" required>
+                </div>
+                <div class="form-row">
+                    <input type="email" placeholder="Email address" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                </div>
+                <div class="form-row">
+                    <input type="password" placeholder="Create password" required>
+                </div>
+                <button type="submit" class="trial-button">Register</button>
+            </form>
+        </div>
+    </section>
+    
+
+   
+
+    
+   
+    
+
+    <footer class="footer-section">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img class="logo" src="./assets/icons/logof.svg" alt="">
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Mobile app</h3>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Live share</a></li>
+                        <li><a href="#">Video record</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Community</h3>
+                    <ul>
+                        <li><a href="#">Featured artists</a></li>
+                        <li><a href="#">The Portal</a></li>
+                        <li><a href="#">Live events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">History</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-buttons">
+                <a href="#" class="footer-button register-button">Register</a>
+                <a href="#" class="footer-button login-button">Log in</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Photo, Inc. 2019. We love our users!</p>
+            <div class="footer-socials">
+                <span>Follow us:</span>
+                <img class="log" src="./assets/icons/fb.svg" alt="">
+                <img class="log" src="./assets/icons/tw.svg" alt="">                
+                <img class="log" src="./assets/icons/in.svg" alt="">               
+                <img class="log" src="./assets/icons/insta.svg" alt="">
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
 </body>
 </html>
