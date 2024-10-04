@@ -65,6 +65,9 @@ html, body, p, ul, ol, li, h1, h2, h3, h4, h5, h6, figure, figcaption, blockquot
   padding: 20px 60px;
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 3;
+  width: 100%;
 }
 
 .logo {
@@ -129,10 +132,10 @@ html, body, p, ul, ol, li, h1, h2, h3, h4, h5, h6, figure, figcaption, blockquot
 
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
     padding: 15px;
-    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .nav-toggle {
@@ -140,30 +143,32 @@ html, body, p, ul, ol, li, h1, h2, h3, h4, h5, h6, figure, figcaption, blockquot
     cursor: pointer;
     font-size: 1.8rem;
     color: #333;
-    margin-left: auto;
-    margin-top: 10px;
+    z-index: 3;
   }
 
   .nav-links {
     display: none;
     flex-direction: column;
-    width: 100%;
-    gap: 20px;
+    width: 250px;
+    gap: 15px;
     background-color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    position: absolute;
-    top: 100%;
-    left: 0;
-    padding: 20px;
-    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    height: 100%;
+    padding: 60px 20px;
+    z-index: 2;
+    overflow-y: auto;
+    transition: right 0.5s ease;
   }
 
   .nav-links.show {
+    right: 0;
     display: flex;
   }
 
   .auth-buttons {
-    display: flex;
     flex-direction: column;
     gap: 10px;
     margin-top: 20px;
@@ -185,10 +190,21 @@ html, body, p, ul, ol, li, h1, h2, h3, h4, h5, h6, figure, figcaption, blockquot
     width: 30px;
     height: 30px;
   }
+
+  .nav-close {
+    
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #7759ff;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 4;
+  }
 }
 
 @media (min-width: 769px) {
-  .nav-toggle {
+  .nav-toggle, .nav-close {
     display: none;
   }
 }
@@ -258,13 +274,13 @@ html, body, p, ul, ol, li, h1, h2, h3, h4, h5, h6, figure, figcaption, blockquot
 /* Features Section CSS Styles */
 
 .features-section {
-  padding: 80px 20px;
-  background-color: #f9f9f9;
+  padding: 60px 20px;
+  
   text-align: center;
 }
 
 .features-content {
-  max-width: 1200px;
+  max-width: 1700px;
   margin: 0 auto;
 }
 
@@ -421,8 +437,8 @@ html, body, p, ul, ol, li, h1, h2, h3, h4, h5, h6, figure, figcaption, blockquot
   border-radius: 10px;
 }
 .new-section-image img{
- height: 60vh;
- width: 80vh;
+ height: 50vh;
+ width: 60vh;
 }
 @media (max-width: 1024px) {
   .new-section {
@@ -595,6 +611,7 @@ html, body, p, ul, ol, li, h1, h2, h3, h4, h5, h6, figure, figcaption, blockquot
 .trial-form-wrapper {
   display: flex;
   justify-content: center;
+  
 }
 
 .trial-form {
@@ -603,7 +620,7 @@ html, body, p, ul, ol, li, h1, h2, h3, h4, h5, h6, figure, figcaption, blockquot
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
+  max-width: 700px;
   width: 100%;
 }
 
@@ -612,6 +629,7 @@ html, body, p, ul, ol, li, h1, h2, h3, h4, h5, h6, figure, figcaption, blockquot
   font-weight: 700;
   color: #333;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .form-row {
@@ -638,7 +656,10 @@ html, body, p, ul, ol, li, h1, h2, h3, h4, h5, h6, figure, figcaption, blockquot
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: 100%;
+  width: 30%;
+  display: flex;
+justify-content: center;
+ 
 }
 
 .trial-button:hover {

@@ -63,15 +63,29 @@ document.addEventListener('DOMContentLoaded', function() {
         form.reset();
     });
 });
-
 document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.createElement('div');
     navToggle.className = 'nav-toggle';
     navToggle.innerHTML = '&#9776;';
     document.querySelector('.navbar').prepend(navToggle);
   
+    const navLinks = document.querySelector('.nav-links');
+    const navClose = document.createElement('div');
+    navClose.className = 'nav-close';
+    navClose.innerHTML = '&times;';
+    navLinks.prepend(navClose);
+  
     navToggle.addEventListener('click', function() {
-      const navLinks = document.querySelector('.nav-links');
-      navLinks.classList.toggle('show');
+      navLinks.classList.add('show');
+    });
+  
+    navClose.addEventListener('click', function() {
+      navLinks.classList.remove('show');
+    });
+  
+    navLinks.addEventListener('click', function(event) {
+      if (event.target.tagName === 'A') {
+        navLinks.classList.remove('show');
+      }
     });
   });
